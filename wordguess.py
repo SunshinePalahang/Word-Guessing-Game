@@ -10,6 +10,14 @@ with open ('words.txt') as file:
     all_words = [line.strip().lower() for line in file if not line.startswith('#')]
 
 words = [choice(all_words) for n in range (10)]
+print("<--------------------WORD GUESSING GAME-------------------->")
+print()
+print("Guide:")
+print("     • Guess the 10 random words by guessing its letters.")
+print("     • You can enter any letters each time.")
+print("     • You only have 30 chances.\n")
 # user input
+while True:
+    letters = input("Make a guess: ")
 # user correct guess and chances left
 # user score
