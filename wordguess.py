@@ -18,7 +18,7 @@ print("     • You can enter any letters each time.")
 print("     • You only have 30 chances.\n")
 # user input
 # user correct guess and chances left
-chances = 30
+chances = 3
 score = 0
 while True:
     if chances != 0:
@@ -35,4 +35,8 @@ while True:
 # user score
     else:
         print("No chances left.\n You guessed " + str(score)+" word(s).")
+        print("Correct Words:")
+        print(*words, sep="\n")
         break
+
+# exit
