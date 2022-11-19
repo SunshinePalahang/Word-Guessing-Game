@@ -17,13 +17,17 @@ print("     • Guess the 10 random words by guessing its letters.")
 print("     • You can enter any letters each time.")
 print("     • You only have 30 chances.\n")
 # user input
-while True:
-    letters = input("Make a guess: ")
-    for word in words:
-        if letters == word:
-            print("You got"+word)
-        for letter in word:
-            print(letter if letter in letters else "_", end=" ")
-        print()
 # user correct guess and chances left
+chances = 3
+while True:
+    if chances != 0:
+        print("You have "+ str (chances)+ " chances left.")
+        letters = input("Make a guess: ")
+        chances -=1
+        for word in words:
+            if letters == word:
+                print("You got"+word)
+            for letter in word:
+                print(letter if letter in letters else "_", end=" ")
+            print()
 # user score
