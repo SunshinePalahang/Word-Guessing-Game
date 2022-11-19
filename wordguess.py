@@ -4,8 +4,7 @@
 # The user will only have 30 chances. (not limited characters each chances)
 
 # randomly pick 10 words
-from random import choice
-
+from random import choice 
 with open ('words.txt') as file:
     all_words = [line.strip().lower() for line in file if not line.startswith('#')]
 
@@ -18,6 +17,7 @@ print("     • You can enter any letters each time.")
 print("     • You only have 30 chances.\n")
 # user input
 # user correct guess and chances left
+
 chances = 3
 score = 0
 while True:
@@ -37,6 +37,7 @@ while True:
         print("No chances left.\n You guessed " + str(score)+" word(s).")
         print("Correct Words:")
         print(*words, sep="\n")
+        exit = input("Would you like to continue: ")
+        if exit == "n":
+            print("THANK YOU FOR USING MY PROGRAM! \n ©️ 2022 All rights reserved.") 
         break
-
-# exit
